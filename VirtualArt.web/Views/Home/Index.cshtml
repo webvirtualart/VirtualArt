@@ -55,17 +55,30 @@
 
 <div class="row">
     <div class="row">
-        <h1>Buscador Canciones</h1>
-        <form class="song-seach">
+        <h2>Buscador Canciones</h2>
+        <form id="songSearch">
             <input type="text" name="artist" placeholder="Nombre del intérprete" required />
             <br />
-            <input type="text" name="song" placeholder="Nombre de la Canción" required/>
+            <input type="text" name="song" placeholder="Nombre de la Canción" required />
             <br />
             <input type="submit" />
-            <br />
-            <img clas="loader" src="~/images/bars.svg" alt="Cargando" />
+
         </form>
+        <br />
+        <img class="loader" src="~/images/bars.svg" alt="Cargando" />
+        <aside class="error"></aside>
+        <main>
+            <article class="artist"> </article>
+
+            <article class="song">  </article>
+        </main>
     </div>
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+
     <div class="col-md-3">
         <h2>Application uses</h2>
         <ul>
