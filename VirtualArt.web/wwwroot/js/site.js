@@ -31,25 +31,25 @@ $form.addEventListener("submit", async e => {
         console.log(artistData, songData);
 
         if (artistData.artists === null) {
-            $artistTemplate = `<h2>no existe el interprete <mark>${artist}</mark></h2>`;
+            $artistTemplate = `<h2>No existe el interprete <mark>${artist}</mark></h2>`;
         } else {
             let artist = artistData.artists[0];
             $artistTemplate = `
-                      <h2>${artist.strArtist}</h2>
+                      <h3>${artist.strArtist}</h3>
                       <img src="${artist.strArtistThumb}"  alt="${artist.strArtist}">
                       <p> ${artist.intBornYear} - ${(artist.intDiedYear || "Presente")} </p>
                       <p>${artist.strCountry}</p>
                       <p>${artist.strGenre}-${artist.strStyle}</p>
-                      <a href ="http://${artist.strWebsite}" target ="_blank">Sitio web</a>
+                      <a href ="http://${artist.strWebsite}" target ="_blank">Sitio Web </a>
                       <p>${artist.strBiographyEN}</p> 
                     `;
         }
 
         if (songData.error) {
-            songTemplate = `<h2>No existe la cancion <mark>${song}</mark></h2>`;
+            songTemplate = `<h2>No existe la canción <mark>${song}</mark></h2>`;
         } else {
             songTemplate = `
-                    <h2>${song.toUpperCase()}</h2>
+                    <h3>${song.toUpperCase()}</h3>
                     <blockquote>${songData.lyrics}</blockquote>
                     `;
         }
