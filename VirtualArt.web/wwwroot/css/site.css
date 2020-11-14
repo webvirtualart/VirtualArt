@@ -1,6 +1,18 @@
 ﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification\ 
 for details on configuring this project to bundle and minify static web assets. */
 
+:root {
+    /* se crean variables */
+    --main-font: sans-serif;
+    --font-size: 16px;
+    --main-color: #f7df1e;
+    --second-colo: #222;
+    --main-modal-color: rgba(247, 222, 30, 0.85);
+    /* 0.85 opacidad*/
+    --second-modal-color: rgba(34, 34, 34, 0.85);
+    --container-width: 1200px;
+}
+
 body {
     padding-top: 50px;
     padding-bottom: 20px;
@@ -51,7 +63,6 @@ main{
     display:none;
     margin:auto;
 }
-
 
 
 @media screen and (min-width: 800px) {
