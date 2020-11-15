@@ -1,11 +1,17 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             xmlns:local="clr-namespace:VirtualArt.prism"
              x:Class="VirtualArt.prism.Views.MainPage"
              Title="{Binding Title}">
 
-    <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
-        <Label Text="Welcome to Xamarin Forms and Prism!" />
-    </StackLayout>
+    <ContentPage.BindingContext>
+        <local:mostartNombre/>
+    </ContentPage.BindingContext>
 
+    <StackLayout  Spacing="25"  Margin="20"  Padding="10">
+        <Entry x:Name="nombreAlumno" Text="{Binding Nombre}" Placeholder="Ingresa nombre"/>
+        <Label Text="{Binding mostrarNombre}"  />
+        <Button Text="Musica" x:Name="BtnMusica" Clicked="BtnMusica_Clicked" Margin="0,24,0,0"/>
+    </StackLayout>
 </ContentPage>
